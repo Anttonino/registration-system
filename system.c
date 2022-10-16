@@ -1,7 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <windows.h>
 #include <stdbool.h>
+
 #define max 50
+#define red "\x1b[31m"
+#define green "\x1b[32m"
+#define blue "\x1b[34m"
+#define reset "\x1b[0m"
 
 // Record 
 typedef struct {
@@ -51,7 +58,7 @@ void show_menu () {
             break;
 
             default:
-            printf ("Error! invalid command\n");
+            printf (red "Error! invalid command\n" reset);
             system ("pause");
             show_menu ();
             break;
@@ -93,7 +100,7 @@ void register_student () {
 			}
         }
         system ("cls");
-        printf ("Congratulations, you registered the student %s", name);
+        printf (green "Congratulations, you registered the student " reset "%s" , name);
         printf ("\n1 - New Register\n");
         printf ("0 - Main Menu\n");
         printf ("\n>> "); scanf ("%d", &command);
@@ -109,7 +116,7 @@ void register_student () {
             break;
     
             default:
-            printf ("Error! invalid command\n");
+            printf (red "Error! invalid command\n" reset);
             system ("pause");
             show_menu ();
             break;
@@ -129,8 +136,9 @@ void search () {
 
     if (total == 0) {
         printf ("-----------------------------\n");
-        printf ("Empty system");
-        printf ("\nPlease register a new student\n");
+        
+        printf (red "Empty system");
+        printf ("\nPlease register a new student\n" reset);
 
         printf ("\n1 - Register new student\n");
         printf ("0 - Back to main menu\n");
@@ -147,7 +155,7 @@ void search () {
             break;
 
             default:
-            printf ("Error! invalid command\n");
+            printf (red "Error! invalid command\n" reset);
             system ("pause");
             show_menu ();
             break;
@@ -185,14 +193,14 @@ void search () {
                 break;
 
                 default:
-                    printf ("Error! invalid command\n");
+                    printf (red "Error! invalid command\n" reset);
                     system ("pause");
                     show_menu ();
                 break;
                 }
-            } else {
+            } else if (exist == false) {
                 printf ("-----------------------------\n");
-                printf ("Student not found\n");
+                printf (red "Student not found\n" reset);
                 printf ("\n1 - Register new student\n");
                 printf ("0 - Back to main menu\n");
         
@@ -209,7 +217,7 @@ void search () {
                     break;
 
                     default:
-                        printf ("Error! invalid command\n");
+                        printf (red "Error! invalid command\n" reset);
                         system ("pause");
                         show_menu ();
                     break;
