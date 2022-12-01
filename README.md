@@ -10,7 +10,7 @@
 
 Eu, [Victor Antonino](https://github.com/Anttonino), criei este repositório para armazenar o meu trabalho final da matéria programação estruturada do Centro Universitário Unicarioca. O projeto proposto pelo professor [André Cotelli](https://www.linkedin.com/in/andr%C3%A9-cotelli-70a62b178/) se trata de um sistema de cadastros de alunos feito em C ou C++.
 
-O trabalho foi entregue em junho de 2022. Porém eu gostaria de atribuir meus novos conhecimentos a este trabalho para demonstrando minha evolução como promgramador e cientista da computação.
+O trabalho foi entregue em junho de 2022. Porém eu gostaria de atribuir meus novos conhecimentos a este trabalho para demonstrar minha evolução como promgramador e cientista da computação.
 
 ## 📚 Requisitos do projeto
 
