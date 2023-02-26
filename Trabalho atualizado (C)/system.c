@@ -50,11 +50,15 @@ void show_menu () {
             break;
 
             case 1:
-                register_student ();
+                student_registration ();
             break;
 
             case 2:
                 search ();
+            break;
+
+            case 3:
+                list_menu ();
             break;
 
             default:
@@ -67,7 +71,7 @@ void show_menu () {
     } while (command != 0);
 }
 
-void register_student () {
+void student_registration () {
     char name [50], gender [10];
     float grade [3], average;
     int age, id, on, command = 1;
@@ -112,7 +116,7 @@ void register_student () {
             break;
 
             case 1:
-                register_student ();
+                student_registration ();
             break;
     
             default:
@@ -147,7 +151,7 @@ void search () {
         
         switch (command) {
             case 1:
-                register_student ();
+                student_registration ();
             break;
 
             case 0:
@@ -209,7 +213,7 @@ void search () {
         
                 switch (command) {
                     case 1:
-                        register_student ();
+                        student_registration ();
                     break;
 
                     case 0:
@@ -225,4 +229,18 @@ void search () {
             }
         }
     }
+}
+
+void list_menu () {
+    int command;
+    
+    system ("cls");
+    printf ("Students List\n");
+	printf ("-----------------------------\n");
+    printf ("1 - Students Aproved\n");
+    printf ("2 - Students Reproved\n");
+
+    printf ("\n0 - Close Program\n\n>> ");
+    scanf ("%d", &command);
+    getchar ();
 }
